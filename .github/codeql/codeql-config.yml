@@ -1,9 +1,10 @@
 name: "CodeQL configurations"
 
 query-filters:
-  - exclude:
-      severity:
-        - medium
-        - low
   - include:
-      tags contain: security 
+      tags contain: security
+      precision:
+        - high
+        - very-high
+      security-severity: /([7-9]|10)\.(\d)+/
+       
