@@ -2,10 +2,8 @@ name: "CodeQL configurations"
 
 query-filters:
   - exclude:
-      problem-severity:
-        - warning
-        - recommendation
-      problem-security:
+      severity:
         - medium
         - low
-        
+  - include:
+      tags contain: security
