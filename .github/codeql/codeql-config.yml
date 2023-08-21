@@ -6,4 +6,4 @@ query-filters:
         - medium
         - low
   - include:
-      tags contain: security
+      tags contain: security 
