@@ -13,7 +13,7 @@ jobs:
     name: Sast Scan
     uses: wjmurphy/pipeline_security/.github/workflows/codeql.yml@main
     with:
-      config-path: ./.github/codeql/codeql-config.yml
+      config-path: wjmurphy/pipeline_security/.github/sast_configurations/codeql.yml
     permissions:
       actions: read
       contents: read
