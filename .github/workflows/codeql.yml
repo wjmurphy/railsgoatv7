@@ -16,5 +16,5 @@ jobs:
       config-path: sast_configurations/.github/sast_configurations/codeql.yml
     permissions:
       actions: read
-      contents: read
+      contents: read 
       security-events: write
