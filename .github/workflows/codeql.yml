@@ -1,17 +1,17 @@
-name: CI
-
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
-
-jobs:
-  codeql:
-    name: CodeQL
-    uses: wjmurphy/pipeline_security/.github/workflows/codeql.yml@main
-    permissions:
-      security-events: write
+# name: CI
+#
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main
+#
+#
+# jobs:
+#   codeql:
+#     name: CodeQL
+#     uses: wjmurphy/pipeline_security/.github/workflows/codeql.yml@main
+#     permissions:
+#       security-events: write
