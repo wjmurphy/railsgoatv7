@@ -12,6 +12,9 @@ on:
 jobs:
   codeql:
     name: CodeQL
-    uses: alphagov/govuk-infrastructure/.github/workflows/codeql-analysis.yml@codeql-workflows
+    uses: alphagov/govuk-infrastructure/.github/workflows/codeql-analysis.yml@main
     permissions:
       security-events: write
+
+  dependabot:
+    uses: alphagov/govuk-infrastructure/.github/workflows/dependency-review@dependabot-workflow
