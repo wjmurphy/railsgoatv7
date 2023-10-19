@@ -17,4 +17,4 @@ jobs:
       security-events: write
 
   dependabot:
-    uses: alphagov/govuk-infrastructure/.github/workflows/dependency-review@dependabot-workflow
+    uses: alphagov/govuk-infrastructure/.github/workflows/dependency-review.yml@dependabot-workflow
