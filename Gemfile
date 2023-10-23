@@ -29,6 +29,7 @@ gem "turbolinks"
 gem "uglifier"
 gem "unicorn"
 gem "rubocop"
+gem "sidekiq", "<6.5.10"
 
 # Add SMTP server support using MailCatcher
 # NOTE: https://github.com/sj26/mailcatcher#bundler
