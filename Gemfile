@@ -29,6 +29,7 @@ gem "turbolinks"
 gem "uglifier"
 gem "unicorn"
 gem "rubocop"
+gem "geokit-rails", "<2.5.0"
 
 # Add SMTP server support using MailCatcher
 # NOTE: https://github.com/sj26/mailcatcher#bundler
