@@ -23,7 +23,7 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
           snyk auth ${SNYK_TOKEN}
-          snyk code test --json-output-path=snyk.json --severity-threshold=high
+          snyk code test --json --severity-threshold=high >> snyk.json
       - name: Archive code coverage results
         uses: actions/upload-artifact@v3
         with:
