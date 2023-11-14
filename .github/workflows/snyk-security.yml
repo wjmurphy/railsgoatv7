@@ -22,4 +22,4 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
           snyk auth ${SNYK_TOKEN}
-          snyk code test --json --severity-threshold=high >> snyk.json
+          snyk code test --json --severity-threshold=high > snyk.json
