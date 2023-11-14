@@ -1,0 +1,31 @@
+name: Snyk Security
+
+on:
+  push:
+    branches: ["main" ]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  snyk:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3 
+      - uses: snyk/actions/setup@master
+      - name: Snyk Code test
+        continue-on-error: true
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        run: |
+          snyk auth ${SNYK_TOKEN}
+          snyk test --json --severity-threshold=high >> snyk-sca.json
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v3
+        with:
+          name: snyk-vulnerability-file
+          path: snyk-sca.json
