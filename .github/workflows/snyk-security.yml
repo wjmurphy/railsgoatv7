@@ -23,6 +23,9 @@ jobs:
         run: |
           snyk auth ${SNYK_TOKEN}
           snyk code test --json-output-path=snyk.json --severity-threshold=high
-        with: 
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v3
+        with:
           name: snyk-vulnerability-file
           path: output/snyk.json
+        
