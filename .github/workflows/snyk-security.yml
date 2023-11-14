@@ -23,4 +23,4 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
           
       - name: Snyk Code test
-        run: snyk code test --json --severity-threshold=high > snyk-code.json || true
+        run: snyk code test 
