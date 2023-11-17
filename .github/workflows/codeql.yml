@@ -10,6 +10,10 @@ on:
 
 
 jobs:
+  snyk:
+    name: snyk sast
+    uses: alphagov/govuk-infrastructure/.github/workflows/snyk-security.yml@snyk-implementation
+    
   codeql:
     name: CodeQL
     uses: alphagov/govuk-infrastructure/.github/workflows/codeql-analysis.yml@main
